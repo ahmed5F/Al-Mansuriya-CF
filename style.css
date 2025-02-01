@@ -98,3 +98,15 @@ footer {
     height: 30px;
     margin-left: 10px;
 }
+
+/* صورة الفريق - دائرية وصغيرة */
+.team-photo {
+    width: 100px; /* حجم صغير جداً */
+    height: 100px; /* ضمان تناسب الصورة */
+    border-radius: 50%; /* جعلها دائرية */
+    display: block;
+    margin: 20px auto; /* توسيط الصورة */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* إضافة ظل خفيف */
+    object-fit: cover; /* ضمان عدم تمدد الصورة */
+    border: 3px solid var(--primary); /* إضافة إطار بنفس لون الموقع */
+}
