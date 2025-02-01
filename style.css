@@ -61,17 +61,65 @@ header {
     padding: 20px;
 }
 
-.coach-item {
-    margin-bottom: 30px;
-    text-align: center;
+/* تنسيق المباريات */
+.match-item {
+    background: var(--white);
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    width: 90%;
+    max-width: 800px;
+    text-align: right;
 }
 
-.coach-img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
+.match-item h2 {
+    color: var(--primary);
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.match-item p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* تنسيق المباراة القادمة */
+.upcoming-match {
+    background: #e3f2fd; /* لون أزرق فاتح */
+}
+
+/* تنسيق المباراة الأخيرة */
+.last-match {
+    background: #fce4ec; /* لون وردي فاتح */
+}
+
+/* تنسيق شعارات الفرق */
+.team-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 15px 0;
+}
+
+.team-logo {
+    width: 60px; /* حجم الشعار */
+    height: 60px;
     object-fit: cover;
-    margin-top: 10px;
+    border-radius: 50%; /* دائري */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-logo:hover {
+    transform: scale(1.1); /* تكبير عند المرور بالماوس */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* إضافة تأثير الظل */
+}
+
+.team-logos span {
+    font-size: 24px;
+    color: var(--primary);
+    font-weight: bold;
 }
 
 /* تصميم الفوتر */
@@ -81,30 +129,6 @@ footer {
     padding: 15px;
     margin-top: 30px;
     box-shadow: var(--shadow);
-}
-
-.social-media {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.facebook-link {
-    color: #3b5998;
-    font-size: 1.2em;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.facebook-link:hover {
-    color: #2d4373;
-}
-
-.social-icon {
-    width: 30px;
-    height: 30px;
-    margin-left: 10px;
 }
 
 /* صورة الفريق - دائرية وصغيرة */
@@ -117,4 +141,12 @@ footer {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* إضافة ظل خفيف */
     object-fit: cover; /* ضمان عدم تمدد الصورة */
     border: 3px solid var(--primary); /* إضافة إطار بنفس لون الموقع */
+}
+
+.coach-img {
+    width: 120px; /* الحجم المحدد للصورة */
+    height: 120px; /* الحفاظ على التناسب */
+    border-radius: 50%; /* جعل الصورة دائرية */
+    object-fit: cover; /* تأكد من عدم تمدد الصورة */
+    margin-top: 10px; /* المسافة من الأعلى */
 }
