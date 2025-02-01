@@ -1,4 +1,4 @@
-/* الألوان والتنسيق العام */
+/* الألوان والتنسيق العام *//* الألوان والتنسيق العام */
 :root {
     --primary: #1a237e;
     --secondary: #e74c3c;
@@ -61,6 +61,19 @@ header {
     padding: 20px;
 }
 
+.coach-item {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.coach-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 10px;
+}
+
 /* تصميم الفوتر */
 footer {
     background: var(--primary);
@@ -68,11 +81,6 @@ footer {
     padding: 15px;
     margin-top: 30px;
     box-shadow: var(--shadow);
-}
-.team-logo {
-    width: 100px;
-    height: auto;
-    margin-bottom: 10px;
 }
 
 .social-media {
