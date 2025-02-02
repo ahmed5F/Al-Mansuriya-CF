@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض الصور </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <style>
+        /* تنسيق التبويبات */
+        .media-tabs {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .tab.active {
+            background: #0056b3;
+        }
+
+        /* تنسيق المحتوى */
+        .media-content {
+            display: none;
+            text-align: center;
+        }
+
+        .media-content.active {
+            display: block;
+        }
+
+        .media-content img {
+            width: 250px;
+            height: auto;
+            margin: 10px;
+            border-radius: 8px;
+        }
+
+        .media-content iframe {
+            width: 300px;
+            height: 170px;
+            margin: 10px;
+            border-radius: 8px;
+        }
+
+        /* تنسيق زر الرجوع */
+        .back-button {
+            display: block;
+            width: 200px;
+            margin: 30px auto;
+            padding: 10px;
+            text-align: center;
+            background: #ff5722;
+            color: white;
+            font-size: 18px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .back-button:hover {
+            background: #e64a19;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 style="text-align: center;">📸 معرض الصور  🎥</h2>
+
+    <!-- شريط التبويبات -->
+    <div class="media-tabs">
+        <button class="tab active" onclick="openTab('photos')">📸 الصور</button>
+        
+
+<!-- محتوى الصور -->
+<div id="photos" class="media-content active">
+    <!-- الصورة الأولى -->
+    <a href="https://ibb.co/vCsbYR5T" target="_blank">
+        <img src="https://i.ibb.co/BH4mNFDQ/827-DF507-3-D32-4-C62-B10-C-94673-B186-B6-F.jpg" alt="صورة فريق تحدي المنصورية" border="0">
+    </a>
+    
+    <!-- الصورة الثانية -->
+    <a href="https://ibb.co/S75NP3R0" target="_blank">
+        <img src="https://i.ibb.co/bRQ1PKzL/IMG-4526.jpg" alt="صورة إضافية للفريق" border="0">
+    </a>
+
+    <!-- الصورة الثالثة -->
+    <a href="https://ibb.co/sdNGnvBR" target="_blank">
+        <img src="https://i.ibb.co/hJ4jbRq9/IMG-4527.jpg" alt="صورة ثالثة للفريق" border="0">
+    </a>
+  
+    <!--الصورة الرابعة -->
+     <a href="https://ibb.co/N6PSFyfK"
+  target="_blank">
+       <img
+src="https://i.ibb.co/XZg8WC6t/IMG-4528.jpg" alt="صورة الرابعة للفريق"
+         border="0">
+  </a>
+
+     <!-- الصورة الخامسة -->
+    <a href="https://ibb.co/B2pPN6Q1" target="_blank">
+        <img src="https://i.ibb.co/jkN5RwQp/IMG-4531.jpg" alt="صورة خامسة للفريق" border="0">
+    </a>
+  
+</div>
+
+    <!-- زر الرجوع إلى القائمة الرئيسية -->
+    <a href="index.html" class="back-button">🔙 الرجوع إلى القائمة الرئيسية</a>
+
+    <script>
+        function openTab(tabName) {
+            // إخفاء جميع المحتويات
+            document.querySelectorAll(".media-content").forEach(content => {
+                content.classList.remove("active");
+            });
+
+            // إظهار المحتوى المطلوب
+            document.getElementById(tabName).classList.add("active");
+
+            // تحديث زر التبويب النشط
+            document.querySelectorAll(".tab").forEach(button => {
+                button.classList.remove("active");
+            });
+            event.currentTarget.classList.add("active");
+        }
+    </script>
+
+</body>
+</html>
