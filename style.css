@@ -150,3 +150,30 @@ footer {
     object-fit: cover; /* تأكد من عدم تمدد الصورة */
     margin-top: 10px; /* المسافة من الأعلى */
 }
+
+.top-scorers {
+    text-align: center;
+    margin: 30px auto;
+    width: 80%;
+}
+
+.top-scorers h2 {
+    color: #d32f2f;
+    margin-bottom: 15px;
+}
+
+.top-scorers table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.top-scorers th, .top-scorers td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.top-scorers th {
+    background-color: #d32f2f;
+    color: white;
+}
