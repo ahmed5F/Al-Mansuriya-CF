@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فريق تحدي المنصورية</title>
+    <style>
+        /* إعدادات الأساس */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+
+        header img {
+            width: 100px;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        h1, p {
+            margin: 5px 0;
+        }
+
+        .visitor-count {
+            background-color: #009688;
+            color: white;
+            margin-top: 30px;
+            border-radius: 10px;
+            padding: 20px;
+            width: 80%;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .visitor-count:hover {
+            transform: scale(1.05);
+        }
+
+        .visitor-number {
+            font-size: 36px;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #ffeb3b;
+        }
+
+        .visitor-date {
+            font-size: 18px;
+            margin-top: 15px;
+        }
+
+        .home-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .home-button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            margin-top: 40px;
+        }
+
+        /* التأثيرات والتجاوب */
+        @media screen and (max-width: 600px) {
+            .visitor-count {
+                width: 90%;
+                padding: 15px;
+            }
+
+            .visitor-number {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="https://i.imgur.com/ON8s7IJ.jpeg" alt="فريق تحدي المنصورية" class="team-photo">
+        <h1>فريق تحدي المنصورية</h1>
+        <p>العراق - ذي قار - المنصورية</p>
+    </header>
+
+    <section class="visitor-count">
+        <h3>عدد الزوار اليوم</h3>
+        <div class="visitor-number" id="visitorCount">100</div>
+        <div class="visitor-date" id="visitorDate"></div>
+
+        <button class="home-button" onclick="window.location.href='index.html';">الرجوع إلى الصفحة الرئيسية</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 فريق تحدي المنصورية. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script>
+        // الحصول على تاريخ اليوم
+        const today = new Date();
+        const day = today.getDate();
+        const month = today.getMonth() + 1; // الشهر يبدأ من 0
+        const year = today.getFullYear();
+
+        // عرض التاريخ في العنصر المخصص في HTML
+        document.getElementById('visitorDate').textContent = `اليوم: ${day}/${month}/${year}`;
+
+        // تخزين عدد الزوار في localStorage
+        let visitorCount = localStorage.getItem('visitorCount');
+        if (!visitorCount) {
+            visitorCount = 1; // إذا كان أول زيارة
+        } else {
+            visitorCount = parseInt(visitorCount) + 1; // زيادة العدد عند كل زيارة
+        }
+
+        // تخزين العدد الجديد في localStorage
+        localStorage.setItem('visitorCount', visitorCount);
+
+        // عرض العدد الجديد في الصفحة
+        document.getElementById('visitorCount').textContent = visitorCount;
+    </script>
+
+</body>
+</html>
